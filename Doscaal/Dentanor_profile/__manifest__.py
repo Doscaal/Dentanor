@@ -11,9 +11,11 @@
     'website': 'http://www.doscaal.fr/',
     'depends': [
         # 'stock_barcodes',
+        'account',
     ],
     'images': [],
     'data': [
+        'views/account_move.xml',
     ],
     'test': [],
     'installable': True,
