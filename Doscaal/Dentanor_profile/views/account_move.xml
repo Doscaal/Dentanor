@@ -10,6 +10,10 @@
                 <field name="cost" optional="show"/>
                 <field name="margin" optional="show"/>
             </xpath>
+            <xpath expr="//field[@name='amount_residual']" position="after">
+                <field name="margin"/>
+                <field name="margin_value"/>
+            </xpath>
         </field>
     </record>
 </odoo>

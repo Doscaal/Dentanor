@@ -9,15 +9,28 @@ class AccountMoveLine(models.Model):
 
     cost = fields.Float(string='Cout')
     margin = fields.Float(string='Marge(%)')
+    margin_value = fields.Float(string='Marge')
 
     @api.onchange('cost', 'price_unit')
     def onchange_price_unit(self):
         if self.price_unit:
             self.margin = (1 - self.cost / self.price_unit) * 100 or -100
+            self.margin_value = (self.price_unit - self.cost) * self.quantity
 
 
 class AccountMove(models.Model):
     _inherit = 'account.move'
+
+    margin = fields.Float(string='Marge(%)', compute="compute_margin")
+    margin_value = fields.Float(string='Marge', compute="compute_margin")
+
+    def compute_margin(self):
+        for inv in self:
+            inv.margin_value = sum(inv.invoice_line_ids.mapped('margin_value'))
+            if inv.amount_untaxed:
+                inv.margin = inv.margin_value / (inv.amount_untaxed) * 100.
+            else:
+                inv.margin = 0
 
     @api.model
     def create(self, values):
@@ -36,4 +49,6 @@ class AccountMove(models.Model):
             if line.price_unit:
                 line.margin = (
                     1 - line.cost / line.price_unit) * 100 or -100
+                line.margin_value = (
+                    line.price_unit - line.cost) * line.quantity
         return res
