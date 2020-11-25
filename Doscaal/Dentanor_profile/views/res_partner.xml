@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">res_partner form surcharge</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="sale.res_partner_view_buttons"/>
+        <field name="priority" eval="16"/>
+        <field name="groups_id" eval="[(6, 0, [ref('base.group_user') ])]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='comment']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='sale_warn']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='sale_warn_msg']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_form2" model="ir.ui.view">
+        <field name="name">res_partner form surcharge2</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="sale.res_partner_view_buttons"/>
+        <field name="priority" eval="32"/>
+        <field name="groups_id" eval="[(6, 0, [ref('account.group_account_manager') ])]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='comment']" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </xpath>
+            <xpath expr="//field[@name='sale_warn']" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </xpath>
+            <xpath expr="//field[@name='sale_warn_msg']" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
