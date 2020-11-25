@@ -18,6 +18,7 @@
     'data': [
         'views/account_move.xml',
         'views/res_partner.xml',
+        'views/sale_order.xml',
     ],
     'test': [],
     'installable': True,
