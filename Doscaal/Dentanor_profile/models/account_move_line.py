@@ -11,6 +11,16 @@ class AccountMoveLine(models.Model):
     margin = fields.Float(string='Marge(%)')
     margin_value = fields.Float(string='Marge')
 
+    @api.onchange('product_id')
+    def onchange_product_cost(self):
+        if not self.product_id:
+            self.cost = 0
+        elif self.product_id in self.sale_line_ids.mapped('product_id'):
+            self.cost = sum(self.sale_line_ids.mapped(
+                'purchase_price')) / len(self.sale_line_ids) / self.quantity
+        else:
+            self.cost = self.product_id.standard_price
+
     @api.onchange('cost', 'price_unit')
     def onchange_price_unit(self):
         if self.price_unit:
@@ -39,7 +49,8 @@ class AccountMove(models.Model):
             if line.sale_line_ids:
                 if line.quantity:
                     line.cost = sum(line.sale_line_ids.mapped(
-                        'purchase_price')) / line.quantity
+                        'purchase_price')) / len(
+                            line.sale_line_ids) / line.quantity
                 else:
                     line.cost = 0
             elif line.product_id:
