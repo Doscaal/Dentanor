@@ -24,7 +24,7 @@ class AccountMoveLine(models.Model):
     @api.onchange('cost', 'price_unit')
     def onchange_price_unit(self):
         if self.price_unit:
-            self.margin = (1 - self.cost / self.price_unit) * 100 or -100
+            self.margin = (1 - self.cost / self.price_unit) * 100
             self.margin_value = (self.price_unit - self.cost) * self.quantity
 
 
@@ -59,7 +59,10 @@ class AccountMove(models.Model):
                 line.cost = 0
             if line.price_unit:
                 line.margin = (
-                    1 - line.cost / line.price_unit) * 100 or -100
+                    1 - line.cost / line.price_unit) * 100
                 line.margin_value = (
                     line.price_unit - line.cost) * line.quantity
+            else:
+                line.margin = -100
+                line.margin_value = - line.cost
         return res
