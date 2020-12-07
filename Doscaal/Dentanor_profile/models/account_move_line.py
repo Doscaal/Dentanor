@@ -97,3 +97,13 @@ class AccountMove(models.Model):
                 line.margin = -100
                 line.margin_value = - line.cost * line.quantity
         return res
+
+    def action_invoice_print(self):
+        super(AccountMove, self).action_invoice_print()
+        if self.user_has_groups('account.group_account_invoice'):
+            return self.env.ref(
+                'studio_customization.factures_397dccda-ed73-4e20-9841-5aa842f63c0c').report_action(
+                    self)
+        else:
+            return self.env.ref(
+                'account.account_invoices_without_payment').report_action(self)
