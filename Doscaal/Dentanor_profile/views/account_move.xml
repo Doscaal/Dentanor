@@ -8,7 +8,8 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_unit']" position="after">
                 <field name="cost" optional="show"/>
-                <field name="margin" optional="show"/>
+                <field name="margin" optional="show" readonly="1"/>
+                <field name="margin_value" optional="hide" readonly="1"/>
             </xpath>
             <xpath expr="//field[@name='amount_residual']" position="after">
                 <field name="margin"/>

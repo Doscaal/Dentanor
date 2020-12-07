@@ -21,11 +21,19 @@ class AccountMoveLine(models.Model):
         else:
             self.cost = self.product_id.standard_price
 
-    @api.onchange('cost', 'price_unit')
+    @api.onchange('cost', 'price_subtotal')
     def onchange_price_unit(self):
-        if self.price_unit:
-            self.margin = (1 - self.cost / self.price_unit) * 100
-            self.margin_value = (self.price_unit - self.cost) * self.quantity
+        if self.price_subtotal:
+            self.margin = (1 - self.cost / (
+                self.price_subtotal / self.quantity)) * 100
+            self.margin_value = self.price_subtotal - (
+                self.cost * self.quantity)
+        elif not self.cost:
+            self.margin = 0
+            self.margin_value = 0
+        else:
+            self.margin = -100
+            self.margin_value = -self.cost * self.quantity
 
 
 class AccountMove(models.Model):
@@ -34,6 +42,25 @@ class AccountMove(models.Model):
     margin = fields.Float(string='Marge(%)', compute="compute_margin")
     margin_value = fields.Float(string='Marge', compute="compute_margin")
 
+    def write(self, values):
+        if values.get('invoice_line_ids', False):
+            for data in values['invoice_line_ids']:
+                if data[0] in (0, 1):
+                    if data[2].get('cost', False):
+                        my_dict = {'cost': data[2]['cost']}
+                    else:
+                        my_dict = {}
+                    if data[2].get('margin', False):
+                        my_dict.update({
+                            'margin': data[2]['margin'],
+                            'margin_value': data[2]['margin_value']
+                        })
+                    for x in values['line_ids']:
+                        if x[0] in (0, 1) and x[1] == data[1]:
+                            x[2].update(my_dict)
+        return super(AccountMove, self).write(values)
+
+    @api.depends('invoice_line_ids.cost', 'invoice_line_ids.price_subtotal')
     def compute_margin(self):
         for inv in self:
             inv.margin_value = sum(inv.invoice_line_ids.mapped('margin_value'))
@@ -57,12 +84,16 @@ class AccountMove(models.Model):
                 line.cost = line.product_id.standard_price
             else:
                 line.cost = 0
-            if line.price_unit:
+            if line.price_subtotal:
                 line.margin = (
-                    1 - line.cost / line.price_unit) * 100
-                line.margin_value = (
-                    line.price_unit - line.cost) * line.quantity
+                    1 - line.cost / (
+                        line.price_subtotal / line.quantity)) * 100
+                line.margin_value = line.price_subtotal - (
+                    line.cost * line.quantity)
+            elif not line.cost:
+                line.margin = 0
+                line.margin_value = 0
             else:
                 line.margin = -100
-                line.margin_value = - line.cost
+                line.margin_value = - line.cost * line.quantity
         return res
