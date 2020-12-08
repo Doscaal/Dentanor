@@ -55,9 +55,16 @@ class AccountMove(models.Model):
                             'margin': data[2]['margin'],
                             'margin_value': data[2]['margin_value']
                         })
-                    for x in values['line_ids']:
-                        if x[0] in (0, 1) and x[1] == data[1]:
-                            x[2].update(my_dict)
+                    if values.get('line_ids', False):
+                        for x in values['line_ids']:
+                            if x[0] in (0, 1) and x[1] == data[1]:
+                                x[2].update(my_dict)
+                                break
+                        else:
+                            values['line_ids'].append([
+                                (data[0], data[1], my_dict)])
+                    else:
+                        values['line_ids'] = [(data[0], data[1], my_dict)]
         return super(AccountMove, self).write(values)
 
     @api.depends('invoice_line_ids.cost', 'invoice_line_ids.price_subtotal')
