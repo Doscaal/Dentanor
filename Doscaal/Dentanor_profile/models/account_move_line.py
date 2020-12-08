@@ -17,7 +17,7 @@ class AccountMoveLine(models.Model):
             self.cost = 0
         elif self.product_id in self.sale_line_ids.mapped('product_id'):
             self.cost = sum(self.sale_line_ids.mapped(
-                'purchase_price')) / len(self.sale_line_ids) / self.quantity
+                'purchase_price')) / len(self.sale_line_ids)
         else:
             self.cost = self.product_id.standard_price
 
@@ -77,7 +77,7 @@ class AccountMove(models.Model):
                 if line.quantity:
                     line.cost = sum(line.sale_line_ids.mapped(
                         'purchase_price')) / len(
-                            line.sale_line_ids) / line.quantity
+                            line.sale_line_ids)
                 else:
                     line.cost = 0
             elif line.product_id:

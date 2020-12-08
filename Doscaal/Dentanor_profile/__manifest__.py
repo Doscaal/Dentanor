@@ -4,7 +4,7 @@
 
 {
     'name': 'Dentanor Profile',
-    'version': '13.0.1.0',
+    'version': '13.0.1.1',
     'category': 'Custom',
     'description': """Profile for Dentanor""",
     'author': 'Doscaal',
