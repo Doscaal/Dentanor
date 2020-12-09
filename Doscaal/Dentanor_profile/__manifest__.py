@@ -12,6 +12,7 @@
     'depends': [
         # 'stock_barcodes',
         'sale',
+        'sale_margin',
         'account_followup',
     ],
     'images': [],
