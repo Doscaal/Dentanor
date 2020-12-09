@@ -61,10 +61,13 @@ class AccountMove(models.Model):
                                 x[2].update(my_dict)
                                 break
                         else:
-                            values['line_ids'].append([
-                                (data[0], data[1], my_dict)])
+                            if data[0] == 1:
+                                values['line_ids'].append([
+                                    (data[0], data[1], my_dict)])
                     else:
-                        values['line_ids'] = [(data[0], data[1], my_dict)]
+                        if data[0] == 1:
+                            values['line_ids'] = [(data[0], data[1], my_dict)]
+
         return super(AccountMove, self).write(values)
 
     @api.depends('invoice_line_ids.cost', 'invoice_line_ids.price_subtotal')
