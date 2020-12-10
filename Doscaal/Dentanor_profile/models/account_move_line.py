@@ -81,6 +81,8 @@ class AccountMove(models.Model):
 
     @api.model
     def create(self, values):
+        if not values.get('invoice_date', False):
+            values['invoice_date'] = fields.Date.today()
         res = super(AccountMove, self).create(values)
         for line in res.invoice_line_ids:
             if line.sale_line_ids:
