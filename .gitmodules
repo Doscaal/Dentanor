@@ -1,0 +1,4 @@
+[submodule "OCA/stock-logistics-barcode"]
+	path = OCA/stock-logistics-barcode
+	url = git@github.com:OCA/stock-logistics-barcode.git
+	branch = 13.0
