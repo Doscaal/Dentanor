@@ -17,6 +17,8 @@
     ],
     'images': [],
     'data': [
+        'security/sale_security.xml',
+        'data/ir_ui_menu.xml',
         'views/account_move.xml',
         'views/res_partner.xml',
         'views/sale_order.xml',
