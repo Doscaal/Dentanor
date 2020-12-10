@@ -112,7 +112,8 @@ class AccountMove(models.Model):
         super(AccountMove, self).action_invoice_print()
         if self.user_has_groups('account.group_account_invoice'):
             return self.env.ref(
-                'studio_customization.factures_397dccda-ed73-4e20-9841-5aa842f63c0c').report_action(
+                'studio_customization.factures_dentanor_0f3e875f-918b-4384-a39a-705eb5280577'
+            ).report_action(
                     self)
         else:
             return self.env.ref(
