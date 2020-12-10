@@ -10,7 +10,7 @@
     'author': 'Doscaal',
     'website': 'http://www.doscaal.fr/',
     'depends': [
-        'stock_barcodes',
+        # 'stock_barcodes',
     ],
     'images': [],
     'data': [
