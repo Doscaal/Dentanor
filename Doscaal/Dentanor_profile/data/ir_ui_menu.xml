@@ -2,7 +2,7 @@
 <odoo>
 <data>
 
-    <menuitem name="Invoices" action="account.action_account_invoice_report_all" id="menu_action_account_invoice_report_all" parent="sale.menu_sale_report" sequence="100"/>
+    <menuitem name="Facturation" action="account.action_account_invoice_report_all" id="menu_action_account_invoice_report_all" parent="sale.menu_sale_report" sequence="100"/>
 
 </data>
 </odoo>
