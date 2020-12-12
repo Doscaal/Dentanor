@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_move_line_tree_grouped" model="ir.ui.view">
+        <field name="name">account.move.line.tree.grouped</field>
+        <field name="model">account.move.line</field>
+        <field eval="1" name="priority"/>
+        <field name="arch" type="xml">
+            <tree string="Journal Items" create="false" editable="bottom">
+                <field name="name" readonly="1"/>
+                <field name="quantity" readonly="1"/>
+                <field name="price_unit" readonly="1"/>
+                <field name="cost"/>
+                <field name="discount" readonly="1"/>
+                <field name="margin"/>
+                <field name="margin_value"/>
+                <field name="tax_ids" widget="many2many_tags" width="0.5" optional="hide" readonly="1"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>
+

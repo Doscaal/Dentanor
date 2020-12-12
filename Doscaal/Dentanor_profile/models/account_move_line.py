@@ -70,6 +70,15 @@ class AccountMove(models.Model):
 
         return super(AccountMove, self).write(values)
 
+    def update_cost(self):
+        self.ensure_one()
+        action = self.env.ref('Dentanor_profile.update_cost_action').read()[0]
+        action['domain'] = [
+            ('move_id', '=', self.id),
+            ('exclude_from_invoice_tab', '=', False),
+        ]
+        return action
+
     @api.depends('invoice_line_ids.cost', 'invoice_line_ids.price_subtotal')
     def compute_margin(self):
         for inv in self:

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <act_window
+        name="Modifier coût"
+        id="update_cost_action"
+        res_model="account.move.line"
+        view_mode="tree,kanban"
+        view_id="Dentanor_profile.view_move_line_tree_grouped"
+        groups="account.group_account_invoice"/>
+
     <record id="invoice_form" model="ir.ui.view">
         <field name="name">account_move surcharge</field>
         <field name="model">account.move</field>
@@ -17,6 +25,10 @@
                 <field name="margin"/>
                 <field name="margin_value"/>
             </xpath>
+            <xpath expr="//button[@name='button_draft']" position="after">
+                <button string="Mise à jour coût" type="object" name="update_cost" attrs="{'invisible' : [('state', 'not in', ('posted', 'cancel'))]}"/>
+            </xpath>
         </field>
     </record>
+
 </odoo>
