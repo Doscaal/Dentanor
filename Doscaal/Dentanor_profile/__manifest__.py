@@ -18,6 +18,7 @@
     'images': [],
     'data': [
         'security/sale_security.xml',
+        'security/account_security.xml',
         'data/ir_ui_menu.xml',
         'views/account_move_line.xml',
         'views/account_move.xml',
