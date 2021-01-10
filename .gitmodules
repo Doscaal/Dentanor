@@ -2,3 +2,8 @@
 	path = OCA/stock-logistics-barcode
 	url = git@github.com:OCA/stock-logistics-barcode.git
 	branch = 13.0
+
+[submodule "OCA/intrastat-extrastat"]
+	path = OCA/intrastat-extrastat
+	url = git@github.com:OCA/intrastat-extrastat.git
+	branch = 13.0
