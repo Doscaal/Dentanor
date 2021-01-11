@@ -7,3 +7,8 @@
 	path = OCA/intrastat-extrastat
 	url = git@github.com:OCA/intrastat-extrastat.git
 	branch = 13.0
+
+[submodule "OCA/l10n-france"]
+	path = OCA/l10n-france
+	url = git@github.com:OCA/l10n-france.git
+	branch = 13.0
