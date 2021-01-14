@@ -318,7 +318,7 @@ msgid "Message displayed on the payment page prior to redirection after a succes
 msgstr ""
 
 #. module: payment_payzen
-#: code:addons/payment_payzen/models/payment.py:87 models/payment.py:89
+#: code:addons/payment_payzen/models/payment.py:87
 #, python-format
 msgid "Redirection to shop in a few seconds..."
 msgstr ""
