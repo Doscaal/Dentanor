@@ -7,6 +7,7 @@ import re
 
 class BarcodeExpression(models.Model):
     _name = 'barcode.expression'
+    _description = 'specific expression for barcode scanner'
 
     name = fields.Char(string='Name', size=64)
     expression = fields.Char(string='Label', size=128)
