@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_payzen_card_system,payzen.card.system,model_payzen_card,base.group_system,1,1,1,1
+access_payzen_language_system,payzen.language.system,model_payzen_language,base.group_system,1,1,1,1

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+# Copyright © Lyra Network.
+# This file is part of PayZen plugin for Odoo. See COPYING.md for license details.
+#
+# Author:    Lyra Network (https://www.lyra.com)
+# Copyright: Copyright © Lyra Network
+# License:   http://www.gnu.org/licenses/agpl.html GNU Affero General Public License (AGPL v3)
+-->
+
+<odoo>
+    <data noupdate="1">
+        <record id="payment_acquirer_payzenmulti" model="payment.acquirer">
+            <field name="name"><![CDATA[PayZen - Payment in installments]]></field>
+            <field name="image" type="base64" file="payment_payzen/static/src/img/logo.png" />
+            <field name="image_128" type="base64" file="payment_payzen/static/src/img/logo.png" />
+            <field name="provider">payzenmulti</field>
+            <field name="state">test</field>
+            <field name="company_id" ref="base.main_company" />
+            <field name="view_template_id" ref="payzen_acquirer_button" />
+            <field name="environment">test</field>
+            <field name="pre_msg"><![CDATA[<p>You will be redirected to the PayZen website after clicking on the payment button.</p>]]></field>
+
+            <field name="payzen_capture_delay"></field>
+            <field name="payzen_validation_mode">-1</field>
+            <field name="payzen_threeds_min_amount"></field>
+            <field name="payzen_multi_count">3</field>
+            <field name="payzen_multi_period">30</field>
+            <field name="payzen_multi_first"></field>
+            <field name="payzen_redirect_enabled">0</field>
+            <field name="payzen_redirect_success_timeout">5</field>
+            <field name="payzen_redirect_error_timeout">5</field>
+            <field name="payzen_return_mode">GET</field>
+
+            <field name="description" type="html">
+                <p><![CDATA[Accept payments in installments with PayZen secure payment gateway.]]></p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fa fa-check"/>Online Payment</li>
+                    <li class="list-inline-item"><i class="fa fa-check" />eCommerce</li>
+                </ul>
+            </field>
+        </record>
+    </data>
+</odoo>
