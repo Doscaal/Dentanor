@@ -14,6 +14,7 @@
         'sale',
         'sale_margin',
         'account_followup',
+        'payment_zen',
     ],
     'images': [],
     'data': [
