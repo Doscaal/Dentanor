@@ -94,12 +94,8 @@ class AcquirerPayzen(models.Model):
     # Compatibility betwen Odoo 13 and previous versions.
     payzen_odoo13 = True if parse_version(release.version) >= parse_version('13') else False
 
-    if payzen_odoo13:
-        image = fields.Char()
-        environment = fields.Char()
-    else:
-        image_128 = fields.Char()
-        state = fields.Char()
+    image = fields.Char(string='Image.')
+    environment = fields.Char()
 
     @api.model
     def multi_add(self, filename):
