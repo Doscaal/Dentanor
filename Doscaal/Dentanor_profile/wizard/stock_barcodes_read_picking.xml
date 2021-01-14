@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_stock_barcodes_read_picking_form" model="ir.ui.view">
+        <field name="name">stock.barcodes.read.picking.form</field>
+        <field name="model">wiz.stock.barcodes.read.picking</field>
+        <field name="inherit_id" ref="stock_barcodes.view_stock_barcodes_read_picking_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group/group/button[@name='action_undo_last_scan']/../.." position="before">
+                <group string="Operations">
+                    <field name="move_line_ids" nolabel="1">
+                        <tree>
+                            <field name="product_id"/>
+                            <field name="qty_done"/>
+                            <field name="product_uom_id"/>
+                            <field name="lot_id"/>
+                        </tree>
+                    </field>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='scan_log_ids']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

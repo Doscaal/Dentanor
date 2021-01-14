@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="barcode_expression_tree" model="ir.ui.view">
+        <field name="name">barcode.expression.tree</field>
+        <field name="model">barcode.expression</field>
+        <field name="arch" type="xml">
+            <tree string="Nomenclature de code-barre">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="expression"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="barcode_expression_action" model="ir.actions.act_window">
+        <field name="name">Nomenclature des codes barres</field>
+        <field name="res_model">barcode.expression</field>
+        <field name="view_id" ref="barcode_expression_tree"/>
+        <field name="context">{}</field>
+    </record>
+
+
+    <record id="barcode_expression_view_form" model="ir.ui.view">
+        <field name="name">barcode.expression.form</field>
+        <field name="model">barcode.expression</field>
+        <field name="arch" type="xml">
+            <form string="Expression">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="expression"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
