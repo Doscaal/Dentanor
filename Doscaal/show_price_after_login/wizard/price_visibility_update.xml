@@ -1,0 +1,35 @@
+<odoo>
+	<record id="price_visibility_wizard" model="ir.ui.view">
+		<field name="name">Price Visibility Wizard</field>
+		<field name="model">price.visibility.update</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Update Price Visibility">
+				<group>
+					<field name="price_visibility" widget="radio"/>
+				</group>
+				<footer>
+					<button name  ="updateVisibility" string="Update" type="object" class="btn-primary"/>
+					or
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+
+    <record id="price_visibility_action" model="ir.actions.act_window">
+        <field name="name">Price Visibility</field>
+        <field name="res_model">price.visibility.update</field>
+        <field name="view_mode">form</field>
+		<field name="view_id" ref="show_price_after_login.price_visibility_wizard"/>
+        <field name="target">new</field>
+    </record>
+
+	<act_window id="action_price_visibility_wizard"
+		name="Price Visibility"
+		res_model="price.visibility.update"
+		binding_model="product.template"
+		view_mode="form"
+		target="new"/>
+
+</odoo>
