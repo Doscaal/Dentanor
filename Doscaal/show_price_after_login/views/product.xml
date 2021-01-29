@@ -1,0 +1,14 @@
+<odoo>
+	<data>
+		<record id="product_template_price_visibility" model="ir.ui.view">
+			<field name="name">product.template.form.price_visibility</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//group[@name='group_standard_price']" inside="inside">
+					<field name="price_visibility"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

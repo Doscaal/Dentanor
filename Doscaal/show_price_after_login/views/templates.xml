@@ -1,0 +1,68 @@
+
+<odoo>
+	<data>
+		<template id="product_price_visibility" inherit_id="website_sale.product">
+			<xpath expr="//div[@id='product_details']/form" position="before">
+				<t t-set ="price_visibility" t-value="product.get_price_visibility(website.id)"/>
+			</xpath>
+
+			<xpath expr="//div[@id='product_details']/form" position="inside">
+				<t t-if="price_visibility=='login' and website.user_id==user_id">
+					<a  class ="btn btn-primary btn-lg mt8 mb8" t-att-href="keep('/web/login?redirect=/shop/product/%s'%slug(product))">
+						<t t-esc="dict(product.fields_get(['price_visibility'])['price_visibility']['selection'])[price_visibility]" />
+					</a>
+				</t>
+				<t t-elif="price_visibility=='contact'">
+					<a class ="btn btn-primary btn-lg mt8 mb8" t-attf-href="mailto:{{ res_company.email }} ?subject=Price for {{product.name}}">
+						<t t-esc="dict(product.fields_get(['price_visibility'])['price_visibility']['selection'])[price_visibility]" />
+					</a>
+				</t>
+			</xpath>
+
+			<xpath expr="//div[@id='product_details']/form/div[hasclass('js_main_product')]" position="attributes">
+				<attribute name="t-att-style">
+					'display:none' if price_visibility == 'contact' or price_visibility == 'login' and website.user_id == user_id else ''
+				</attribute>
+			</xpath>
+		</template>
+	</data>
+
+	<data>
+		<template id="product_item_price_visibility" inherit_id="website_sale.products_item">
+			<xpath expr="//div[hasclass('product_price')]" position="before">
+				<t t-set  ="price_visibility" t-value="product.get_price_visibility(website.id)"/>
+
+				<t t-if="price_visibility=='login' and website.user_id==user_id">
+					<a class ="btn btn-primary btn-xs mt8 mb8" t-att-href="keep('/web/login?redirect=/shop')">
+						<t t-esc="dict(product.fields_get(['price_visibility'])['price_visibility']['selection'])[price_visibility]" />
+					</a>
+				</t>
+				<t t-elif="price_visibility=='contact'">
+					<a class ="btn btn-primary btn-xs mt8 mb8" t-attf-href="mailto:{{ res_company.email }}?subject=Price for {{product.name}}">
+						<t t-esc="dict(product.fields_get(['price_visibility'])['price_visibility']['selection'])[price_visibility]" />
+					</a>
+				</t>
+			</xpath>
+			<xpath expr="//div[hasclass('product_price')]" position="attributes">
+				<attribute name="t-att-style">
+					'display:none' if price_visibility == 'contact' or price_visibility == 'login' and website.user_id == user_id else ''
+				</attribute>
+			</xpath>
+		</template>
+
+		<template id="website_sale.products_add_to_cart" inherit_id="website_sale.products_item" active="False" customize_show="True" name="Add to Cart">
+			<xpath expr="//div[hasclass('product_price')]" position="inside">
+				<t t-if="price_visibility=='show' or price_visibility=='login' and website.user_id!=user_id">
+					<t t-set="product_variant_id" t-value="product._get_first_possible_variant_id()"/>
+					<input name="product_id" t-att-value="product_variant_id" type="hidden"/>
+					<t t-if="product_variant_id">
+						<a href="#" role="button" class="btn btn-secondary btn-sm a-submit" aria-label="Shopping cart" title="Shopping cart">
+							<span class="fa fa-shopping-cart" />
+						</a>
+					</t>
+				</t>
+			</xpath>
+    	</template>
+
+	</data>
+</odoo>
