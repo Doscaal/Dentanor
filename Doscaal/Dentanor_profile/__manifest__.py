@@ -15,6 +15,7 @@
         'sale_margin',
         'account_followup',
         'payment_payzen',
+        'show_price_after_login',
     ],
     'images': [],
     'data': [
