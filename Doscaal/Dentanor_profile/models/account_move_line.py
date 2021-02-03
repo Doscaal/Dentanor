@@ -67,8 +67,11 @@ class AccountMove(models.Model):
                     else:
                         if data[0] == 1:
                             values['line_ids'] = [(data[0], data[1], my_dict)]
-
-        return super(AccountMove, self).write(values)
+        res = super(AccountMove, self).write(values)
+        if values.get('line_ids', False):
+            for line in self.line_ids:
+                line.onchange_price_unit()
+        return res
 
     def update_cost(self):
         self.ensure_one()
