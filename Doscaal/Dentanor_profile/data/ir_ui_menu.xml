@@ -4,5 +4,7 @@
 
     <menuitem name="Facturation" action="account.action_account_invoice_report_all" id="menu_action_account_invoice_report_all" parent="sale.menu_sale_report" sequence="100"/>
 
+    <menuitem name="Nomenclature des codes-barre" action="barcode_expression_action" id="menu_action_barcode_expression" parent="stock.menu_product_in_config_stock" sequence="100"/>
+
 </data>
 </odoo>
