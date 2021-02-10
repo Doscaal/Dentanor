@@ -26,6 +26,7 @@
         'views/account_move.xml',
         'views/res_partner.xml',
         'views/sale_order.xml',
+        'views/product_template.xml',
     ],
     'test': [],
     'installable': True,
