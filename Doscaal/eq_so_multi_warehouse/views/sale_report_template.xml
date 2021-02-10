@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<odoo>
+
+	<!-- PDF Report -->
+	<template id="inherit_template_report_saleorder_document"
+		inherit_id="sale.report_saleorder_document">
+
+		<xpath expr="//table[hasclass('o_main_table')]//th[1]" position="after">
+			<th class="text-left">Warehouse</th>
+		</xpath>
+		<xpath
+			expr="//tbody[hasclass('sale_tbody')]//t[@t-if='not line.display_type']//td[1]"
+			position="after">
+			<td>
+				<span t-field="line.sol_warehouse_id" />
+			</td>
+		</xpath>
+	</template>
+
+	<!-- Portal -->
+	<template id="inherit_sale_order_portal_content"
+		inherit_id="sale.sale_order_portal_content">
+
+		<xpath expr="//table[@id='sales_order_table']//th[1]" position="after">
+			<th class="text-left">Warehouse</th>
+		</xpath>
+		<xpath
+			expr="//tbody[hasclass('sale_tbody')]//t[@t-if='not line.display_type']//td[1]"
+			position="after">
+			<td>
+				<span t-field="line.sol_warehouse_id" />
+			</td>
+		</xpath>
+	</template>
+
+</odoo>
