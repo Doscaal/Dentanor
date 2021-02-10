@@ -11,6 +11,7 @@
     'website': 'http://www.doscaal.fr/',
     'depends': [
         'sale_margin',
+        'stock_barcodes',
     ],
     'images': [],
     'data': [
