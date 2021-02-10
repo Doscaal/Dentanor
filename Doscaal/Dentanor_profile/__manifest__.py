@@ -1,4 +1,4 @@
-# copyright Doscaal 2019
+# copyright Doscaal 2021
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 # -*- coding: utf-8 -*-
 
