@@ -8,6 +8,8 @@ from odoo.exceptions import UserError
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
+    date_order = fields.Datetime(readonly=False, track_visibility='onchange')
+
     @api.model
     def create(self, values):
         if values.get('partner_id', False):
