@@ -29,6 +29,7 @@
         'views/barcode_expression.xml',
         'data/ir_ui_menu.xml',
         'wizard/stock_barcodes_read_picking.xml',
+        'views/product_template.xml',
     ],
     'test': [],
     'installable': True,
