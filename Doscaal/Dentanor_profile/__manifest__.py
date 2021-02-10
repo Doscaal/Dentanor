@@ -16,6 +16,7 @@
         'account_followup',
         'payment_payzen',
         'show_price_after_login',
+        'sale_product_configurator',
     ],
     'images': [],
     'data': [
