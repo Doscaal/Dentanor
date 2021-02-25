@@ -5,6 +5,27 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="sale.res_partner_view_buttons"/>
         <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='o_address_format']/field[@name='state_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//div[@class='o_address_format']/field[@name='state_id']" position="after">
+                <field name="department_id" class="o_address_state" placeholder="Department" options="{&quot;no_open&quot;: True}"/>
+            </xpath>
+            <xpath expr="//div[@name='div_address']/field[@name='state_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//div[@name='div_address']/field[@name='state_id']" position="after">
+                <field name="department_id" class="o_address_state" placeholder="Department" options="{&quot;no_open&quot;: True}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">res_partner form surcharge</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="sale.res_partner_view_buttons"/>
+        <field name="priority" eval="16"/>
         <field name="groups_id" eval="[(6, 0, [ref('base.group_user') ])]"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='comment']" position="attributes">
