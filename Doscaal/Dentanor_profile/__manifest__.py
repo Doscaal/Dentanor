@@ -17,6 +17,7 @@
         'payment_payzen',
         'show_price_after_login',
         'sale_product_configurator',
+        'l10n_fr_intrastat_product',
     ],
     'images': [],
     'data': [
