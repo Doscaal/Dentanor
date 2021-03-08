@@ -18,6 +18,7 @@
         'show_price_after_login',
         'sale_product_configurator',
         'l10n_fr_intrastat_product',
+        'purchase',
     ],
     'images': [],
     'data': [
@@ -32,6 +33,7 @@
         'views/barcode_expression.xml',
         'data/ir_ui_menu.xml',
         'wizard/stock_barcodes_read_picking.xml',
+        'views/product_supplierinfo.xml',
     ],
     'test': [],
     'installable': True,
