@@ -1,12 +1,14 @@
 # Copyright 2020 Doscaal
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import models, _
+from odoo import models, _, fields
 from odoo.exceptions import UserError
 
 
 class ResPartner(models.Model):
     _inherit = 'res.partner'
+
+    user_id = fields.Many2one(domain=[])
 
     def open_action_followup(self):
         compta = self.env.ref('account.group_account_manager')
