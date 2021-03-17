@@ -21,4 +21,17 @@
         </field>
     </record>
 
+    <record id="product_template_form" model="ir.ui.view">
+        <field name="name">prodcut_template surcharge</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='purchase']" position="attributes">
+                <attribute name="groups">purchase.group_purchase_user</attribute>
+            </xpath>
+            <xpath expr="//page[@name='inventory']" position="attributes">
+                <attribute name="groups">stock.group_stock_user</attribute>
+            </xpath>
+        </field>
+    </record>
 </odoo>
