@@ -19,6 +19,8 @@
         'sale_product_configurator',
         'l10n_fr_intrastat_product',
         'purchase',
+        'industry_fsm_stock',
+        'industry_fsm_report',
     ],
     'images': [],
     'data': [
