@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="dentanor_worksheet_form" model="ir.ui.view">
+        <field name="name">dentanor_worksheet surcharge</field>
+        <field name="model">dentanor.project_worksheet_template</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="x_task_id"/>
+                            <field name="x_name"/>
+                            <field name="date"/>
+                            <field name="supplier_id"/>
+                            <field name="product_id"/>
+                            <field name="lot_id"/>
+                            <field name="move_product_id"/>
+                            <field name="distance"/>
+                        </group>
+                        <group>
+                            <field name="photo" widget="image"/>
+                            <field name="signature" widget="signature"/>
+                        </group>
+                        <field name="x_comments"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
+

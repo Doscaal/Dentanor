@@ -13,8 +13,10 @@ class ProjectTask(models.Model):
             for line in self.sale_order_id.order_line}
         self.sale_order_id.order_line._action_launch_stock_rule(
             previous_product_uom_qty=previous_product_uom_qty)
-        self.sale_order_id.picking_ids.filtered(
-            lambda p: p.state == 'confirmed').action_assign()
+        picking_ids = self.sale_order_id.picking_ids.filtered(
+            lambda p: p.state == 'confirmed')
+        if picking_ids:
+            picking_ids.action_assign()
         for picking in self.sale_order_id.picking_ids:
             for move in picking.move_lines.filtered(
                     lambda ml: ml.state != 'done'):

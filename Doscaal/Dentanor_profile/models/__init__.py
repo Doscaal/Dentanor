@@ -9,5 +9,6 @@ from . import barcode_expression
 from . import sale_order
 from . import intrastat_product_declaration
 from . import project_task
+from . import project_worksheet_template_dentanor
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
