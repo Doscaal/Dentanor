@@ -6,6 +6,7 @@ from odoo import fields, models
 
 class ProjectWorksheetTemplateDentanor(models.Model):
     _name = 'dentanor.project_worksheet_template'
+    _description = 'modele pour les feuilles d intervention dentanor'
 
     x_name = fields.Char(string='Nom', size=64)
     x_task_id = fields.Many2one(comodel_name='project.task', string='Tâche')
