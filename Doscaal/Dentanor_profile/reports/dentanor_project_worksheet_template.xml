@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_dentanor_project_worksheet_template">
+            <div>
+                <div class="row mb-2" style="page-break-inside: avoid">
+                    <div class="col-3 font-weight-bold">Date de l'intervention</div>
+                    <div class="col-9" t-field="worksheet.date"/>
+                </div>
+                <div class="row mb-2" style="page-break-inside: avoid">
+                    <div class="col-3 font-weight-bold">Fournisseur</div>
+                    <div class="col-9" t-field="worksheet.supplier_id"/>
+                </div>
+                <div class="row mb-2" style="page-break-inside: avoid">
+                    <div class="col-3 font-weight-bold">Produit</div>
+                    <div class="col-9" t-field="worksheet.product_id"/>
+                </div>
+                <div class="row mb-2" style="page-break-inside: avoid">
+                    <div class="col-3 font-weight-bold">Numéro de série</div>
+                    <div class="col-9" t-field="worksheet.lot_id"/>
+                </div>
+                <div class="row mb-2" style="page-break-inside: avoid">
+                    <div class="col-3 font-weight-bold">Déplacement</div>
+                    <div class="col-9" t-field="worksheet.move_product_id"/>
+                </div>
+                <div t-if="distance != 1" class="row mb-2" style="page-break-inside: avoid">
+                    <div class="col-3 font-weight-bold">distance</div>
+                    <div class="col-9" t-field="worksheet.distance"/>
+                </div>
+                <div class="row mb-2" style="page-break-inside: avoid">
+                    <div class="col-5 font-weight-bold">Description de l'intervention</div>
+                </div>
+                <div class="row mb-2" style="page-break-inside: avoid">
+                    <div class="text-wrap col-12" t-field="worksheet.x_comments"/>
+                </div>
+                <div t-if="worksheet.photo" class="row mb-2" style="page-break-inside: avoid">
+                    <div class="col-5 font-weight-bold">photo</div>
+                </div>
+                <div t-if="worksheet.photo" class="row mb-2" style="page-break-inside: avoid">
+                    <div class="col-12" t-field="worksheet.photo" t-options="{'widget':'image'}"/>
+                </div>
+                <div t-if="worksheet.signature" class="row mb-2" style="page-break-inside: avoid">
+                    <div class="col-5 font-weight-bold">Signature technicien</div>
+                </div>
+                <div t-if="worksheet.signature" class="row mb-2" style="page-break-inside: avoid">
+                    <div class="col-12" t-field="worksheet.signature" t-options="{'widget':'image'}"/>
+                </div>
+            </div>
+        </template>
+
+    </data>
+</odoo>

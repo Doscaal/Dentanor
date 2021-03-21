@@ -19,6 +19,8 @@
         'sale_product_configurator',
         'l10n_fr_intrastat_product',
         'purchase',
+        'industry_fsm_stock',
+        'industry_fsm_report',
     ],
     'images': [],
     'data': [
@@ -34,6 +36,9 @@
         'wizard/stock_barcodes_read_picking.xml',
         'views/product_template.xml',
         'views/product_supplierinfo.xml',
+        'data/project_worksheet_template_data.xml',
+        'views/dentanor_project_worksheet_template.xml',
+        'reports/dentanor_project_worksheet_template.xml',
     ],
     'test': [],
     'installable': True,

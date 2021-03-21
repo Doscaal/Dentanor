@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="intervention_dentanor" model="project.worksheet.template">
+            <field name="name">Intervention Dentanor</field>
+            <field name="color">2</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="intervention_dentanor_action" model="ir.actions.act_window">
+            <field name="name">Intervention Dentanor</field>
+            <field name="res_model">dentanor.project_worksheet_template</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+            <field name="context">{'edit':False, 'create':False, 'delete':False, 'duplicate': False}</field>
+        </record>
+
+    </data>
+</odoo>
