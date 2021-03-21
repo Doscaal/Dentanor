@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <template id="report_dentanoir_project_worksheet_template">
+        <template id="report_dentanor_project_worksheet_template">
             <div>
                 <div class="row mb-2" style="page-break-inside: avoid">
                     <div class="col-3 font-weight-bold">Date de l'intervention</div>
