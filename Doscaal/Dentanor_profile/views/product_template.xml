@@ -18,6 +18,9 @@
                     </div>
                 </button>
             </xpath>
+                <xpath expr="//field[@name='expense_policy']" position="after">
+                    <field name="is_forfait"/>
+                </xpath>
         </field>
     </record>
 
