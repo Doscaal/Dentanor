@@ -11,7 +11,6 @@
                         <group>
                             <field name="x_task_id" invisible="1"/>
                             <field name="x_name" invisible="1"/>
-                            <field name="date"/>
                             <field name="supplier_id"/>
                             <field name="product_id"/>
                             <field name="lot_id" domain="[('product_id', '=', product_id)]"/>
