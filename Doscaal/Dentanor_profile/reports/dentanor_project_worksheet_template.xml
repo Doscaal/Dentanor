@@ -4,10 +4,6 @@
         <template id="report_dentanor_project_worksheet_template">
             <div>
                 <div class="row mb-2" style="page-break-inside: avoid">
-                    <div class="col-3 font-weight-bold">Date de l'intervention</div>
-                    <div class="col-9" t-field="worksheet.date"/>
-                </div>
-                <div class="row mb-2" style="page-break-inside: avoid">
                     <div class="col-3 font-weight-bold">Fournisseur</div>
                     <div class="col-9" t-field="worksheet.supplier_id"/>
                 </div>

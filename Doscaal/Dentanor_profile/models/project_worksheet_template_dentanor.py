@@ -11,7 +11,6 @@ class ProjectWorksheetTemplateDentanor(models.Model):
     x_name = fields.Char(string='Nom', size=64)
     x_task_id = fields.Many2one(comodel_name='project.task', string='Tâche')
     x_comments = fields.Text(string='Description')
-    date = fields.Date(string='Date d\'intervention')
     supplier_id = fields.Many2one(comodel_name='res.partner',
                                   string='Fournisseur')
     product_id = fields.Many2one(comodel_name='product.product',
@@ -45,7 +44,17 @@ class ProjectWorksheetTemplateDentanor(models.Model):
 
     def write(self, values):
         res = super(ProjectWorksheetTemplateDentanor, self).write(values)
-        if values.get('move_product_id', False):
+        if not self.sale_order_line_id and values.get(
+                'move_product_id', False):
+            so = res.x_task_id.sale_order_id
+            so.order_line = [
+                (0, 0, {
+                    'product_id': res.move_product_id.id,
+                    'product_uom_qty': res.distance,
+                })]
+            res.sale_order_line_id = so.order_line.filtered(
+                lambda sol: sol.product_id == res.move_product_id)
+        elif values.get('move_product_id', False):
             self.sale_order_line_id.write({
                     'product_id': self.move_product_id.id,
                     'product_uom_qty': self.distance,
@@ -61,14 +70,15 @@ class ProjectWorksheetTemplateDentanor(models.Model):
             values['x_name'] = self.env['project.task'].browse(
                 values['x_task_id']).name
         res = super(ProjectWorksheetTemplateDentanor, self).create(values)
-        if not res.x_task_id.sale_order_id:
-            res._fsm_ensure_sale_order()
-        so = res.x_task_id.sale_order_id
-        so.order_line = [
-            (0, 0, {
-                'product_id': res.move_product_id.id,
-                'product_uom_qty': res.distance,
-            })]
-        res.sale_order_line_id = so.order_line.filtered(
-            lambda sol: sol.product_id == res.move_product_id)
+        if res.move_product_id:
+            if not res.x_task_id.sale_order_id:
+                res._fsm_ensure_sale_order()
+            so = res.x_task_id.sale_order_id
+            so.order_line = [
+                (0, 0, {
+                    'product_id': res.move_product_id.id,
+                    'product_uom_qty': res.distance,
+                })]
+            res.sale_order_line_id = so.order_line.filtered(
+                lambda sol: sol.product_id == res.move_product_id)
         return res
