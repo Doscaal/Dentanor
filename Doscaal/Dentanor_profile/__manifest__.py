@@ -21,6 +21,7 @@
         'purchase',
         'industry_fsm_stock',
         'industry_fsm_report',
+        'mrp',
     ],
     'images': [],
     'data': [
