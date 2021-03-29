@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_product_seatch" model="ir.ui.view">
+        <field name="name">Product product search</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="mrp.mrp_product_product_search_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='components']" position="after">
+                <filter name="stock_available" string="Produits en stock" domain="[('qty_available','&gt;',0)]"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
