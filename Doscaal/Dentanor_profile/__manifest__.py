@@ -40,6 +40,7 @@
         'views/dentanor_project_worksheet_template.xml',
         'reports/dentanor_project_worksheet_template.xml',
         'views/product_category.xml',
+        'views/res_users.xml',
     ],
     'test': [],
     'installable': True,
