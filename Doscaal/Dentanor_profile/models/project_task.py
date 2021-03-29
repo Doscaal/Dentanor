@@ -27,3 +27,11 @@ class ProjectTask(models.Model):
         picking = self.sale_order_id.picking_ids.filtered(
             lambda p: p.state not in ['done', 'cancel'])
         picking.with_context(cancel_backorder=True).action_done()
+
+    def _fsm_create_sale_order(self):
+        sale_order = super(ProjectTask, self)._fsm_create_sale_order()
+        if self.user_id and self.user_id.warehouse_id:
+            self.sale_order_id.write({
+                'warehouse_id': self.user_id.warehouse_id.id,
+            })
+        return sale_order
