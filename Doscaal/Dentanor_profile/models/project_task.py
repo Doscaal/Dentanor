@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import models
+from odoo.osv import expression
 
 
 class ProjectTask(models.Model):
@@ -27,6 +28,14 @@ class ProjectTask(models.Model):
         picking = self.sale_order_id.picking_ids.filtered(
             lambda p: p.state not in ['done', 'cancel'])
         picking.with_context(cancel_backorder=True).action_done()
+
+    def action_fsm_view_material(self):
+        action = super(ProjectTask, self).action_fsm_view_material()
+        if self.user_id.warehouse_id:
+            action['context'].update({
+                'search_default_warehouse_id': self.user_id.warehouse_id.id,
+                'search_default_stock_available': 1})
+        return action
 
     def _fsm_create_sale_order(self):
         sale_order = super(ProjectTask, self)._fsm_create_sale_order()
