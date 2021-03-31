@@ -15,11 +15,11 @@ class AccountInvoiceReport(models.Model):
     def _select(self):
         res = super(AccountInvoiceReport, self)._select()
         res += ''',
-           -line.balance / nullif(line.price_subtotal, 0.0) * line.cost *
-           line.quantity as cost,
-           -line.balance / nullif(line.price_subtotal, 0.0) * line.margin_value
+           coalesce(-line.balance / nullif(line.price_subtotal, 0.0) * line.cost *
+           line.quantity, line.quantity * line.cost) as cost,
+           coalesce(-line.balance / nullif(line.price_subtotal, 0.0) * line.margin_value, margin_value)
            as margin_value,
-           -line.balance / nullif(line.price_subtotal, 0.0) * line.margin
+           coalesce(-line.balance / nullif(line.price_subtotal, 0.0) * line.margin, line.margin)
            as margin
         '''
         return res
