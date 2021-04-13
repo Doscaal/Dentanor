@@ -43,6 +43,7 @@
         'views/product_category.xml',
         'views/res_users.xml',
         'views/product_product.xml',
+        'views/project_task.xml',
     ],
     'test': [],
     'installable': True,
