@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="task_form" model="ir.ui.view">
+        <field name="name">task surcharge</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="industry_fsm.project_task_view_form_fsm_quotation"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='is_fsm']" position="before">
+                <field name="sale_order_id" invisible="1"/>
+            </xpath>
+            <xpath expr="//button[@name='action_fsm_view_material']" position="after">
+                <button name="action_fsm_view_order" string="Devis" type="object" class="oe_stat_button" icon="fa-dollar" attrs="{'invisible': ['|', ('is_fsm', '=', False), ('sale_order_id', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
+

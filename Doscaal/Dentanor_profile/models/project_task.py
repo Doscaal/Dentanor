@@ -2,7 +2,6 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import models
-from odoo.osv import expression
 
 
 class ProjectTask(models.Model):
@@ -35,6 +34,19 @@ class ProjectTask(models.Model):
             action['context'].update({
                 'search_default_warehouse_id': self.user_id.warehouse_id.id,
                 'search_default_stock_available': 1})
+        return action
+
+    def action_fsm_view_order(self):
+        action = self.env.ref('sale.action_quotations').read()[0]
+        action.update({
+            'name': self.name,
+            'context': {
+                'fsm_mode': True,
+                'default_task_id': self.id,
+                'default_partner_id': self.partner_id.id},
+        })
+        action['res_id'] = self.sale_order_id.id
+        action['views'] = [(self.env.ref('sale.view_order_form').id, 'form')]
         return action
 
     def _fsm_create_sale_order(self):
