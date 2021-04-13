@@ -8,3 +8,4 @@ class ProductProduct(models.Model):
     _inherit = 'product.product'
 
     margin_cost = fields.Float(string='Coût de revient')
+    standard_price = fields.Float(string='Valorisation')
