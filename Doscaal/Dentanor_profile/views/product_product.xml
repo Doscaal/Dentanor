@@ -12,4 +12,15 @@
         </field>
     </record>
 
+    <record id="product_product_form" model="ir.ui.view">
+        <field name="name">Product product form</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='standard_price']" position="before">
+                <field name="margin_cost" widget="monetary" options="{'currency_field': 'cost_currency_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
 </odoo>
