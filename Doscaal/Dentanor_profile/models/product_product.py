@@ -7,5 +7,6 @@ from odoo import models, fields
 class ProductProduct(models.Model):
     _inherit = 'product.product'
 
-    margin_cost = fields.Float(string='Coût de revient')
+    margin_cost = fields.Float(string='Coût de revient',
+                               company_dependent=True)
     standard_price = fields.Float(string='Valorisation')
