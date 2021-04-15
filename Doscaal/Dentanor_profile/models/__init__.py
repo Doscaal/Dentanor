@@ -15,5 +15,6 @@ from . import project_worksheet_template_dentanor
 from . import res_users
 from . import product_product
 from . import sale_order_line
+from . import stock_quant
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
