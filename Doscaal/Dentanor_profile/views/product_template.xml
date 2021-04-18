@@ -18,9 +18,9 @@
                     </div>
                 </button>
             </xpath>
-                <xpath expr="//field[@name='expense_policy']" position="after">
-                    <field name="is_forfait"/>
-                </xpath>
+            <xpath expr="//field[@name='expense_policy']" position="after">
+                <field name="is_forfait"/>
+            </xpath>
         </field>
     </record>
 
@@ -29,11 +29,37 @@
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_form_view"/>
         <field name="arch" type="xml">
+            <xpath expr="//div/field[@name='standard_price']/.." position="attributes">
+                <attribute name="groups">purchase.group_purchase_user</attribute>
+            </xpath>
+            <xpath expr="//label[@for='standard_price']" position="attributes">
+                <attribute name="groups">purchase.group_purchase_user</attribute>
+            </xpath>
+            <xpath expr="//label[@for='standard_price']" position="attributes">
+                <attribute name="string">Valorisation</attribute>
+            </xpath>
+            <xpath expr="//label[@for='standard_price']" position="before">
+                <field name="margin_cost" attrs="{'invisible': [('product_variant_count', '&gt;', 1)]}"/>
+            </xpath>
             <xpath expr="//page[@name='purchase']" position="attributes">
                 <attribute name="groups">purchase.group_purchase_user</attribute>
             </xpath>
             <xpath expr="//page[@name='inventory']" position="attributes">
                 <attribute name="groups">stock.group_stock_user</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_template_tree" model="ir.ui.view">
+        <field name="name">prodcut_template surcharge</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='standard_price']" position="after">
+                <field name="margin_cost"/>
+            </xpath>
+            <xpath expr="//field[@name='standard_price']" position="attributes">
+                <attribute name="invisible">1</attribute>
             </xpath>
         </field>
     </record>
