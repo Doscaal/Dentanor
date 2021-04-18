@@ -9,8 +9,12 @@
             <xpath expr="//field[@name='location_id']" position="after">
                 <field name="warehouse_id"/>
             </xpath>
+            <xpath expr="//field[@name='location_id']" position="after">
+                <field name="supplier_id"/>
+            </xpath>
             <xpath expr="//filter[@name='locationgroup']" position="after">
                 <filter string="Entrepôt" name="warehouse_id" context="{'group_by': 'warehouse_id'}"/>
+                <filter string="Fournisseur" name="supplier_id" context="{'group_by': 'supplier_id'}"/>
             </xpath>
         </field>
     </record>
