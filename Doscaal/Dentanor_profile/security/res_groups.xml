@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record model="res.groups" id="fusion_contact">
+            <field name="name">Fusion des contacts</field>
+        </record>
+
+    </data>
+</odoo>
