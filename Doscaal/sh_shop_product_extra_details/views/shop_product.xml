@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="product_custom" inherit_id="website_sale.product" name="Product">
+        <xpath expr="//h1" position="after">
+            <div t-if="website.company_id.is_internal_ref">
+                <span> Internal Reference&amp;nbsp:&amp;nbsp</span>
+                <span class="text-muted" t-esc="product.default_code" />
+            </div>
+            <div t-if="website.company_id.is_barcode">
+                <span> Barcode&amp;nbsp:&amp;nbsp</span>
+                <span class="text-muted" t-esc="product.barcode" />
+            </div>
+            <div t-if="website.company_id.is_uom">
+                <span> UoM&amp;nbsp:&amp;nbsp</span>
+                <span class="text-muted" t-esc="product.uom_id.name" />
+            </div>
+        </xpath>
+    </template>
+</odoo>

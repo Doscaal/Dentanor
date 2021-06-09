@@ -8,12 +8,13 @@ from . import product_category
 from . import product_template
 from . import barcode_expression
 from . import sale_order
+from . import barcode_expression
 from . import intrastat_product_declaration
 from . import project_task
 from . import project_worksheet_template_dentanor
 from . import res_users
-from . import stock_quant
 from . import product_product
 from . import sale_order_line
+from . import stock_quant
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
