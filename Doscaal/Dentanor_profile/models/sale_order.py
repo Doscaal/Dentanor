@@ -23,4 +23,5 @@ class SaleOrder(models.Model):
                 template_id = self.env['ir.model.data'].xmlid_to_res_id(
                     'sale.mail_template_sale_confirmation',
                     raise_if_not_found=False)
+
         return template_id
