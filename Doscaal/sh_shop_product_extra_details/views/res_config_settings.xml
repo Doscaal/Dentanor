@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <!-- Invoice / Bills -->
+    <record id="sh_show_website_product_detail_config_settings" model="ir.ui.view">
+        <field name="name">Whatsapp send Show Taxes Config Settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@data-key='website']/div[@id='website_selection_settings']" position="after">
+                <h2>Show Product Details on Product Page</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box" id="specific_user_website_product_internal_ref">
+                        <div class="o_setting_left_pane">
+                            <field name="is_internal_ref" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="is_internal_ref" />
+                            <div class="text-muted">
+                                Show Product Internal Reference Details in Shop Product
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="specific_user_website_product_barcode">
+                        <div class="o_setting_left_pane">
+                            <field name="is_barcode" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="is_barcode" />
+                            <div class="text-muted">
+                                Show Product Barcode Details in Shop Product
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="specific_user_website_product_uom">
+                        <div class="o_setting_left_pane">
+                            <field name="is_uom" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="is_uom" />
+                            <div class="text-muted">
+                                Show Product UoM Details in Shop Product
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
