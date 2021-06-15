@@ -1,0 +1,399 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-12 09:52+0000\n"
+"PO-Revision-Date: 2021-06-12 09:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.cart_line_validate_lines
+msgid "<i class=\"fa fa-exclamation-triangle\"> Product Not Available</i>"
+msgstr "<i class=\"fa fa-exclamation-triangle\"> Produit non disponible</i>"
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.website_stock_show
+msgid "<i class=\"fa fa-shopping-cart\"/> Add to Cart"
+msgstr "i class=\"fa fa-shopping-cart\"/> Ajouter au panier"
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.Wk_website_stock_product
+msgid "<strong>Message to be displayed when Product is in Stock:</strong>"
+msgstr "<strong>Message à afficher lorsque le produit est en stock:</strong>"
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.Wk_website_stock_product
+msgid "<strong>Message to be displayed when Product is out of Stock:</strong>"
+msgstr "<strong>Message à afficher lorsque le produit n'est plus en stock:</strong>"
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.Wk_website_stock_product
+msgid "<strong>When Product is out of Stock:</strong>"
+msgstr "<strong>Quand le produit n'est pas en stock:</strong>"
+
+#. module: website_stock
+#: model:ir.model.fields.selection,name:website_stock.selection__website_stock_config_settings__wk_warehouse_type__all
+msgid "ALL"
+msgstr "Tous"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__is_active
+msgid "Active on website"
+msgstr "Actif sur le site web"
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.cart_line_validate_lines
+msgid "Add one"
+msgstr "Ajouter un"
+
+#. module: website_stock
+#: model:ir.model.fields.selection,name:website_stock.selection__product_product__wk_order_allow__allow
+msgid "Allow Order"
+msgstr "Autoriser la commande"
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.wk_addons_website_stock_config
+msgid "Configuration"
+msgstr "Configuration"
+
+#. module: website_stock
+#: model:ir.model,name:website_stock.model_webkul_website_addons
+msgid "Configuration settings for Website Webkul Addons"
+msgstr "Paramétres pour les addons webkul website"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: website_stock
+#: code:addons/website_stock/models/res_config.py:0
+#, python-format
+msgid ""
+"Currently a Configuration Setting for Website Stock is active. You can not "
+"active other Configuration Setting. So, If you want to deactive the previous"
+" active configuration setting and active new configuration then click on "
+"'Deactive Previous And Active New' button else click on 'cancel'."
+msgstr ""
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__wk_custom_message
+#: model_terms:ir.ui.view,arch_db:website_stock.view_wk_website_config_settings
+msgid "Custom Message"
+msgstr "Message personnalisé"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__custome_stock_color
+msgid "Custom Message Color"
+msgstr "Couleur du message personnalisé"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__wk_warehouse_type
+msgid "Default Stock Location"
+msgstr "Emplacement de stock par défaut"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__wk_deny_order
+#: model_terms:ir.ui.view,arch_db:website_stock.view_wk_website_config_settings
+msgid "Deny Order"
+msgstr "Refuser la commande"
+
+#. module: website_stock
+#: model:ir.model.fields.selection,name:website_stock.selection__product_product__wk_order_allow__deny
+msgid "Deny Orders"
+msgstr "Refuser les commandes"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__display_name
+msgid "Display Name"
+msgstr "Afficher le nom"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__wk_display_qty
+msgid "Display Quantity on Product Page"
+msgstr "Afficher la quantité sur la page produit"
+
+#. module: website_stock
+#: model:website.stock.config.settings,wk_in_stock_msg:website_stock.stock_config_setting_1
+msgid "En Stock"
+msgstr "En stock"
+
+#. module: website_stock
+#: model:ir.model.fields,help:website_stock.field_website_stock_config_settings__custome_stock_color
+#: model:ir.model.fields,help:website_stock.field_website_stock_config_settings__in_stock_color
+#: model:ir.model.fields,help:website_stock.field_website_stock_config_settings__out_stock_color
+msgid "Enter Hexa Decimal Value of Color"
+msgstr "Entrer la valeur de la couleur en Hexadecimal"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__wk_extra_msg
+msgid "Extra Custom Message"
+msgstr "Message personnalisé complémentaire"
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.view_wk_website_config_settings
+msgid "Extra Message"
+msgstr "Message complémentaire"
+
+#. module: website_stock
+#: model:ir.model.fields.selection,name:website_stock.selection__website_stock_config_settings__wk_stock_type__forecasted
+msgid "Forecasted Quantity"
+msgstr "Prévision de quantité"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__wk_in_stock_msg
+msgid "In Stock Message"
+msgstr "Message 'En stock'"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__in_stock_color
+msgid "In stock message color"
+msgstr "Couleur du message 'En stock'"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__write_uid
+msgid "Last Updated by"
+msgstr "Dernière modification par"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: website_stock
+#: model:website.stock.config.settings,wk_custom_message:website_stock.stock_config_setting_1
+msgid "Last in Stock!!."
+msgstr "Dernier en stock!!"
+
+#. module: website_stock
+#: code:addons/website_stock/models/res_config.py:0
+#: model:ir.model.fields,field_description:website_stock.field_product_product__wk_in_stock_msg
+#: model:ir.model.fields,field_description:website_stock.field_product_product__wk_out_of_stock_msg
+#, python-format
+msgid "Message"
+msgstr "Message"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.view_wk_website_config_settings
+msgid "Other Settings"
+msgstr "Autres paramètres"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__wk_out_of_stock_msg
+msgid "Out of Stock Message"
+msgstr "Message d'indisponibilité en stock"
+
+#. module: website_stock
+#: model:ir.model.fields,help:website_stock.field_website_stock_config_settings__wk_in_stock_msg
+#: model:ir.model.fields,help:website_stock.field_website_stock_config_settings__wk_out_of_stock_msg
+msgid "Out of Stock Message."
+msgstr "Message d'indisponibilité en stock"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__out_stock_color
+msgid "Out of stock message color"
+msgstr "Couleur du message d'indisponibilité en stock"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_product_product__wk_override_default
+msgid "Override Default Message"
+msgstr "Surcharge du message par défaut"
+
+#. module: website_stock
+#: model:ir.model,name:website_stock.model_product_product
+msgid "Product"
+msgstr "Produit"
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.Wk_website_stock_product
+msgid "Product Stock Settings"
+msgstr "Paramètres de stock produit"
+
+#. module: website_stock
+#: model:ir.model,name:website_stock.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: website_stock
+#: model:ir.model.fields.selection,name:website_stock.selection__website_stock_config_settings__wk_stock_type__outgoing
+msgid "Quantity On Hand - Outgoing Quantity"
+msgstr "Quantité en stock - quantité sortante"
+
+#. module: website_stock
+#: model:ir.model.fields.selection,name:website_stock.selection__website_stock_config_settings__wk_stock_type__on_hand
+msgid "Quantity on Hand"
+msgstr "Quantité en stock"
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.cart_line_validate_lines
+msgid "Remove one"
+msgstr "Enlever un"
+
+#. module: website_stock
+#: model:website.stock.config.settings,wk_out_of_stock_msg:website_stock.stock_config_setting_1
+msgid "Réappro."
+msgstr "Réapprovisionnement"
+
+#. module: website_stock
+#: model:ir.model.fields.selection,name:website_stock.selection__website_stock_config_settings__wk_warehouse_type__specific
+msgid "SPECIFIC"
+msgstr "SPECIFIQUE"
+
+#. module: website_stock
+#: model:ir.model,name:website_stock.model_sale_order
+msgid "Sales Order"
+msgstr "Commandes de vente"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__save_setting_on_product
+msgid "Save Current Setting on Product"
+msgstr "Sauvegarder le paramétrage produit actuel"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__wk_minimum_qty
+msgid "Show When Quantity Less Than"
+msgstr "Montrer quand la quantité est inférieur à"
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.view_wk_website_config_settings
+msgid "Stock Configuration"
+msgstr "Configuration du stock"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__wk_stock_location
+msgid "Stock Location"
+msgstr "Emplacement de stock"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__wk_stock_type
+msgid "Stock Type"
+msgstr "Type de stock"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__custom_stock_text
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__in_stock_text
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__out_stock_text
+msgid "Text color"
+msgstr "Couleur du texte"
+
+#. module: website_stock
+#: model:ir.model.fields,help:website_stock.field_website_stock_config_settings__save_setting_on_product
+msgid ""
+"True value of this field save 'allow/deny order' and show 'stock quantity' "
+"setting on the product variants if you uncheck this box then product "
+"variants setting not overwrite by the main setting."
+msgstr ""
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.Wk_website_stock_product_template
+msgid "Update Stock Settings"
+msgstr "Mise à jour des paramètres de stock"
+
+#. module: website_stock
+#. openerp-web
+#: code:addons/website_stock/static/src/js/stock_quntity_vaildation.js:0
+#: code:addons/website_stock/static/src/js/stock_quntity_vaildation.js:0
+#: code:addons/website_stock/static/src/js/stock_quntity_vaildation.js:0
+#, python-format
+msgid "WARNING"
+msgstr "AVERTISSEMENT"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_website_stock_config_settings__wk_warehouse_name
+msgid "Warehouse Name"
+msgstr "Nom de l'entrepôt"
+
+#. module: website_stock
+#: model:ir.model,name:website_stock.model_website
+msgid "Website"
+msgstr "Site web"
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.view_wk_website_config_settings
+msgid "Website Stock"
+msgstr "Stock du site web"
+
+#. module: website_stock
+#: model:ir.model,name:website_stock.model_website_stock_config_settings
+msgid "Website Stock Config Settings"
+msgstr "Paramètres du stock du site web"
+
+#. module: website_stock
+#: model:ir.actions.act_window,name:website_stock.action_website_stock_configuration
+msgid "Website Stock Configuration"
+msgstr "Configuration du stock du site web"
+
+#. module: website_stock
+#: model:ir.model.fields,field_description:website_stock.field_product_product__wk_order_allow
+msgid "When Product is out of Stock"
+msgstr "Quand le produit n'est pas disponible en stock"
+
+#. module: website_stock
+#. openerp-web
+#: code:addons/website_stock/static/src/js/stock_quntity_vaildation.js:0
+#, python-format
+msgid ""
+"You Already Added All Avalible Quantity of Product in Your Cart, You Can not"
+" Add More Quantity."
+msgstr ""
+"Vous avez déjà ajouté tout le stock disponible dans votre panier. Vous ne pouvez en ajouter davantage."
+
+#. module: website_stock
+#. openerp-web
+#: code:addons/website_stock/static/src/js/stock_quntity_vaildation.js:0
+#, python-format
+msgid "You Can Not Add More Quantity."
+msgstr "Vous ne pouvez pas en ajouter plus."
+
+#. module: website_stock
+#. openerp-web
+#: code:addons/website_stock/static/src/js/stock_quntity_vaildation.js:0
+#, python-format
+msgid "You Can Not Add This Product in Your Cart."
+msgstr "Vous ne pouvez pas ajouter ce produit dans votre panier"
+
+#. module: website_stock
+#. openerp-web
+#: code:addons/website_stock/static/src/js/stock_quntity_vaildation.js:0
+#, python-format
+msgid "You are Trying to Add More Than Available Quantity of Product."
+msgstr "Vous tentez d'ajouter plus que la quantité disponible pour ce produit"
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.view_wk_website_config_settings
+msgid "hexadecimal value of color"
+msgstr "Valeur de la couleur en héxadécimal"
+
+#. module: website_stock
+#: model_terms:ir.ui.view,arch_db:website_stock.stock_panel
+msgid "left."
+msgstr "Gauche."

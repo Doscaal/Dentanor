@@ -1,0 +1,537 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_stock_notifiy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-12 09:51+0000\n"
+"PO-Revision-Date: 2021-06-14 12:54+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: \n"
+"Language: fr_FR\n"
+
+#. module: website_stock_notifiy
+#: model:mail.template,body_html:website_stock_notifiy.website_stock_notify_email
+msgid ""
+"\n"
+"                \n"
+"            <style>\n"
+"                body {\n"
+"                    background-color:#F2F2F2;\n"
+"                }\n"
+"            </style>\n"
+"            <div style=\"background:#FFFFFF;width:600px;margin: 0 auto;"
+"width:600px;font-size:17px;font-weight:700;font-family: Arial, Helvetica, "
+"sans-serif;\">\n"
+"           \n"
+"            <div style=\"font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;background:#50A9ED;"
+"height:71px;padding:2px 15px;\">\n"
+"                <img src=\"/logo.png\" alt=\"company-logo\" style=\"border-"
+"style: none; vertical-align: middle; max-height: 71px; width: auto; height: "
+"auto;\" width=\"180\" height=\"69\">\n"
+"            </div>\n"
+"            <!-- body main content -->\n"
+"            <div style=\"font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;padding: 0px 15px;\">\n"
+"                <div style=\"font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;margin: 32px 0px;\">\n"
+"                    <div style=\"font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;margin-bottom: 10px;"
+"\"><font color=\"#333333\">Bonjour&nbsp;</font><span style=\"color: rgb(80, "
+"169, 237);\">${object.name},</span></div>\n"
+"                    <div style=\"font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;color: rgb(51, 51, 51);"
+"\">Un produit qui vous intéressez le&nbsp;<span style=\"font-style: inherit; "
+"font-variant-ligatures: inherit; font-variant-caps: inherit; text-align: "
+"inherit;\">&nbsp;</span><span style=\"font-style: inherit; font-variant-"
+"ligatures: inherit; font-variant-caps: inherit; text-align: inherit; color: "
+"rgb(85, 85, 85);\">${object.create_date}&nbsp;</span><span style=\"font-"
+"style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; "
+"text-align: inherit;\">est à present à nouveau en stock. Nous vous laissons "
+"le soin de vous dans notre <a href=\"https://www.biosummer3d.com/boutique\" "
+"style=\"text-decoration:none;background-color:transparent;color:rgb(0, 135, "
+"132);\">boutique en ligne</a> pour passer votre commande.&nbsp;</span></"
+"div>\n"
+"                </div>\n"
+"                <div style=\"font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;color: rgb(51, 51, 51); "
+"margin-bottom: 10px;\">\n"
+"                    <div style=\"font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\">Information produit</"
+"div>\n"
+"                </div>\n"
+"                <table style=\"border-collapse:collapse;color: rgb(51, 51, "
+"51); width: 100%;\">\n"
+"                  <tbody><tr>\n"
+"                    <td style=\"width:183px\">\n"
+"                        <div style=\"font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;padding:2px;border: 1px "
+"solid #CCCCCC;height:153px;width:153px;overflow:hidden;\">\n"
+"                            <img src=\"${object.product_image_url}\" alt="
+"\"${object.wk_product.name}\" style=\"border-style: none; vertical-align: "
+"middle; max-height: 153px; max-width: 153px; width: auto; height: auto;\" "
+"width=\"0\" height=\"0\">\n"
+"                        </div>\n"
+"                    </td>\n"
+"                    <td style=\"vertical-align:top;\">\n"
+"                        <div style=\"font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;line-height:31px;\">\n"
+"                            <strong style=\"font-weight:bolder;\">\n"
+"                                <div style=\"font-size:13px;font-family:"
+"&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;color:"
+"#50A9ED;\">${object.wk_product.display_name}</div>\n"
+"                                <div style=\"font-size:13px;font-family:"
+"&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;margin-"
+"top:16px;\"><a href=\"${object.wk_pageURL}\" style=\"text-decoration:none;"
+"background-color:transparent;height:50px;width:100px;background:#50A9ED;"
+"padding:13px 26px;color:#FFFFFF;font-size:14px;\">Commander</a></div>\n"
+"                            </strong>\n"
+"                        </div>\n"
+"                    </td> \n"
+"                  </tr>\n"
+"                </tbody></table><br>\n"
+"                <div style=\"font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;color: rgb(51, 51, 51);"
+"\">\n"
+"                    <div style=\"font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;margin-bottom:10px;"
+"\">Bien Cordialement,</div>\n"
+"                    <div style=\"font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;color:#50A9ED;\">"
+"${object.wk_user.company_id.name}</div>\n"
+"                </div>\n"
+"            </div><br><br>\n"
+"            <div style=\"font-family:&quot;Lucida Grande&quot;, Helvetica, "
+"Verdana, Arial, sans-serif;background:#333333;height:50px;color:#FFFFFF;font-"
+"size:16px;padding:2px 0;\">\n"
+"                <div style=\"font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;text-align:center;margin-"
+"top:17px;\">\n"
+"                    <div style=\"font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\"><a style=\"text-"
+"decoration:none;background-color:transparent;color:#50A9ED;\" href=\"/\">"
+"${object.wk_user.company_id.name}</a></div>\n"
+"                </div>\n"
+"            <div style=\"font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\">\n"
+"        </div>\n"
+"            \n"
+"            </div></div>"
+msgstr ""
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__message_needaction
+msgid "Action Needed"
+msgstr "Action démandée"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_notifiy_config_settings__is_active
+msgid "Active on website"
+msgstr "Actif sur le site web"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_notifiy_config_settings__wk_cron_confirm
+msgid "Automatic Email Scheduler"
+msgstr "Planificateur d'email automatique"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.view_stock_notify_filter
+msgid "By Name"
+msgstr "Par nom"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields.selection,name:website_stock_notifiy.selection__website_stock_notify__state__cancel
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.view_stock_notify_filter
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.website_stock_notifier_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.wk_addons_stock_notify_config
+msgid "Configuration"
+msgstr "Configuration"
+
+#. module: website_stock_notifiy
+#: model:ir.model,name:website_stock_notifiy.model_webkul_website_addons
+msgid "Configuration settings for Website Webkul Addons"
+msgstr "Paramétres pour les addons webkul website"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_notifiy_config_settings__create_uid
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_notifiy_config_settings__create_date
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__create_date
+msgid "Created on"
+msgstr "Crée le"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_notifiy_config_settings__wk_cron_shedular
+msgid "Cron Settings"
+msgstr "Paramètres cron"
+
+#. module: website_stock_notifiy
+#: code:addons/website_stock_notifiy/models/res_config.py:0
+#, python-format
+msgid ""
+"Currently a Configuration Setting for Website Stock is active. You can not "
+"active other Configuration Setting. So, If you want to deactive the previous "
+"active configuration setting and active new configuration then click on "
+"'Deactive Previous And Active New' button else click on 'cancel'."
+msgstr ""
+"Actuellement, un paramètre de configuration pour le stock de site Web est "
+"actif. Vous ne pouvez pas activer d'autres paramètres de configuration. "
+"Donc, si vous souhaitez désactiver le paramètre de configuration actif "
+"précédent et activer la nouvelle configuration, cliquez sur le bouton "
+"\"Désactiver le précédent et le nouveau actif\", sinon cliquez sur \"Annuler"
+"\"."
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_notifiy_config_settings__display_name
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__display_name
+msgid "Display Name"
+msgstr "Afficher le nom"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields.selection,name:website_stock_notifiy.selection__website_stock_notify__state__done
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.view_stock_notify_filter
+msgid "Done"
+msgstr "Fait"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields.selection,name:website_stock_notifiy.selection__website_stock_notify__state__draft
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.view_stock_notify_filter
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__email
+msgid "Email"
+msgstr "Email"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.website_stock_notify
+msgid "Email ID:"
+msgstr "Id de l'email:"
+
+#. module: website_stock_notifiy
+#: model:ir.actions.server,name:website_stock_notifiy.ir_cron_stock_notify_email_action_ir_actions_server
+#: model:ir.cron,cron_name:website_stock_notifiy.ir_cron_stock_notify_email_action
+#: model:ir.cron,name:website_stock_notifiy.ir_cron_stock_notify_email_action
+msgid "Email Stock Notify"
+msgstr "Email de notification de stock"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_notifiy_config_settings__wk_email_template
+msgid "Email Template"
+msgstr "Modèle d'email"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__message_follower_ids
+msgid "Followers"
+msgstr "Abonnées"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Abonnées (Canaux)"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnées (partenaires)"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.view_stock_notify_filter
+msgid "Group By"
+msgstr "Groupé par"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_notifiy_config_settings__id
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,help:website_stock_notifiy.field_website_stock_notify__message_needaction
+#: model:ir.model.fields,help:website_stock_notifiy.field_website_stock_notify__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si activé, un nouveau message requiert votre attention."
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,help:website_stock_notifiy.field_website_stock_notify__message_has_error
+#: model:ir.model.fields,help:website_stock_notifiy.field_website_stock_notify__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si coché, des messages indique une souci de livraison"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__message_is_follower
+msgid "Is Follower"
+msgstr "Est abonné"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_notifiy_config_settings____last_update
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_notifiy_config_settings__write_uid
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_notifiy_config_settings__write_date
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__write_date
+msgid "Last Updated on"
+msgstr "Dernière msie à jour le"
+
+#. module: website_stock_notifiy
+#: code:addons/website_stock_notifiy/models/website_stock_notification.py:0
+#, python-format
+msgid "Mail cannot be send, you have cancelled it!!"
+msgstr "Le mail n'a pu être envoyé. Vous devez l'annuler"
+
+#. module: website_stock_notifiy
+#: code:addons/website_stock_notifiy/models/website_stock_notification.py:0
+#, python-format
+msgid "Mail has alerady been sent!!"
+msgstr "L'email a déjà été envoyé"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Pièce jointe principale"
+
+#. module: website_stock_notifiy
+#: code:addons/website_stock_notifiy/models/res_config.py:0
+#, python-format
+msgid "Message"
+msgstr "Message"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__message_has_error
+msgid "Message Delivery error"
+msgstr "Message d'erreur de livraison"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__message_ids
+msgid "Messages"
+msgstr "Messages"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.website_stock_notify
+msgid "NOTIFY"
+msgstr "PREVENEZ-MOI"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.website_stock_notify
+msgid "NOTIFY ME"
+msgstr "Me prévenir"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_notifiy_config_settings__name
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.view_stock_notify_filter
+msgid "Notify Search"
+msgstr "Recherche de notification"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.website_stock_notify
+msgid "Notify me when this product is in stock:"
+msgstr "Me prévenir quand ce produit sera en stock"
+
+#. module: website_stock_notifiy
+#: model:ir.actions.server,name:website_stock_notifiy.action_website_email_notify
+msgid "Notify/send Email"
+msgstr "Prévenir/envoyer un email"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,help:website_stock_notifiy.field_website_stock_notify__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Nombre de message nécessitant une action"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,help:website_stock_notifiy.field_website_stock_notify__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de message avec une erreur de livraison"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,help:website_stock_notifiy.field_website_stock_notify__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Nombre de messages non-lus"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__wk_pageURL
+msgid "PageURl"
+msgstr "PageURL"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.website_stock_notify
+msgid "Please Input Your Name."
+msgstr "Merci de renseigner votre nom."
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.website_stock_notify
+msgid "Please Input a Vailid Email ID."
+msgstr "Merci de renseigner un email valide"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.website_stock_notify
+msgid ""
+"Please enter your details and we will notify you when this product is back "
+"in stock:"
+msgstr ""
+"Merci d'entrer vos informations et vous serez notifié quand le produit sera "
+"de nouveau en stock"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__wk_product
+msgid "Product"
+msgstr "Produit"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__product_image_url
+msgid "Product Image URL"
+msgstr "URL de l'image produit"
+
+#. module: website_stock_notifiy
+#: model:mail.template,subject:website_stock_notifiy.website_stock_notify_email
+msgid "Product Notification"
+msgstr "Notification produit"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.website_stock_notifier_form
+msgid "Resend"
+msgstr "Ré-envoyer"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS d'erreur de livraison"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__state
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.view_stock_notify_filter
+msgid "Status"
+msgstr "Status"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.website_stock_notifier_form
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.website_stock_notifier_tree
+msgid "Stock Notifier"
+msgstr "Notification de stock"
+
+#. module: website_stock_notifiy
+#: model:ir.actions.act_window,name:website_stock_notifiy.action_website_stock_notifiy
+msgid "Stock Notifiy Configuration"
+msgstr "Configuration des notifications de stock"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.wk_website_stock_notify
+msgid "Stock Notify Settings"
+msgstr "Paramètre des notifications de stock"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.website_stock_notify
+msgid ""
+"Thank you for your interest in this product. You will be notified on this "
+"email when the product will be available."
+msgstr ""
+"Merci pour l'intérêt que vous portez à ce produit. Vous serez notifié à cet "
+"email lorsque ce produit sera disponible"
+
+#. module: website_stock_notifiy
+#: code:addons/website_stock_notifiy/models/website_stock_notification.py:0
+#, python-format
+msgid "The quantity of the Product is less than zero, email cannot be send!!!"
+msgstr ""
+"La quantité de produit est inférieur à zéro, l'email ne peut être envoyé!!!"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__message_unread
+msgid "Unread Messages"
+msgstr "Message non lus"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Compteur de messages non-lus"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__wk_user
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,field_description:website_stock_notifiy.field_website_stock_notify__website_message_ids
+msgid "Website Messages"
+msgstr "Messages du site web"
+
+#. module: website_stock_notifiy
+#: model:ir.model,name:website_stock_notifiy.model_website_stock_notify
+#: model:ir.ui.menu,name:website_stock_notifiy.menu_wk_customer_group
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.wk_website_stock_notify
+msgid "Website Stock Notify"
+msgstr "Notification du stock du site web"
+
+#. module: website_stock_notifiy
+#: model:ir.model.fields,help:website_stock_notifiy.field_website_stock_notify__website_message_ids
+msgid "Website communication history"
+msgstr "Hsitorique des communications du site web"
+
+#. module: website_stock_notifiy
+#: model:ir.actions.act_window,name:website_stock_notifiy.action_website_stock_notifier
+msgid "Website stock Notify"
+msgstr "Notification du stock du site web"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.website_stock_notify
+msgid "Your Name:"
+msgstr "Votre nom:"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.website_stock_notify
+msgid "enter your email"
+msgstr "Entrer votre email"
+
+#. module: website_stock_notifiy
+#: model_terms:ir.ui.view,arch_db:website_stock_notifiy.website_stock_notify
+msgid "enter your name"
+msgstr "Entrez votre nom:"
+
+#. module: website_stock_notifiy
+#: model:ir.model,name:website_stock_notifiy.model_website_notifiy_config_settings
+msgid "website.notifiy.config.settings"
+msgstr "website.notifiy.config.settings"
