@@ -1,0 +1,81 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_shop_product_extra_details
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-12 09:51+0000\n"
+"PO-Revision-Date: 2021-06-14 12:40+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: \n"
+"Language: fr_FR\n"
+
+#. module: sh_shop_product_extra_details
+#: model_terms:ir.ui.view,arch_db:sh_shop_product_extra_details.product_custom
+msgid "<span> Barcode&amp;nbsp:&amp;nbsp</span>"
+msgstr "<span> Code barre&amp;nbsp&amp;nbsp:&amp;nbsp</span>"
+
+#. module: sh_shop_product_extra_details
+#: model_terms:ir.ui.view,arch_db:sh_shop_product_extra_details.product_custom
+msgid "<span> Internal Reference&amp;nbsp:&amp;nbsp</span>"
+msgstr "<span> Référence Interne&amp;nbsp:&amp;nbsp</span>"
+
+#. module: sh_shop_product_extra_details
+#: model_terms:ir.ui.view,arch_db:sh_shop_product_extra_details.product_custom
+msgid "<span> UoM&amp;nbsp:&amp;nbsp</span>"
+msgstr "<span> UdM&amp;nbsp:&amp;nbsp</span>"
+
+#. module: sh_shop_product_extra_details
+#: model:ir.model.fields,field_description:sh_shop_product_extra_details.field_res_company__is_barcode
+#: model:ir.model.fields,field_description:sh_shop_product_extra_details.field_res_config_settings__is_barcode
+msgid "Barcode"
+msgstr "Code barre"
+
+#. module: sh_shop_product_extra_details
+#: model:ir.model,name:sh_shop_product_extra_details.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: sh_shop_product_extra_details
+#: model:ir.model,name:sh_shop_product_extra_details.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres"
+
+#. module: sh_shop_product_extra_details
+#: model:ir.model.fields,field_description:sh_shop_product_extra_details.field_res_company__is_internal_ref
+#: model:ir.model.fields,field_description:sh_shop_product_extra_details.field_res_config_settings__is_internal_ref
+msgid "Internal Reference"
+msgstr "Référence Interne"
+
+#. module: sh_shop_product_extra_details
+#: model_terms:ir.ui.view,arch_db:sh_shop_product_extra_details.sh_show_website_product_detail_config_settings
+msgid "Show Product Barcode Details in Shop Product"
+msgstr "Montrer le code barre sur la page produit"
+
+#. module: sh_shop_product_extra_details
+#: model_terms:ir.ui.view,arch_db:sh_shop_product_extra_details.sh_show_website_product_detail_config_settings
+msgid "Show Product Details on Product Page"
+msgstr "Montrer le détail du produit sur la page produit"
+
+#. module: sh_shop_product_extra_details
+#: model_terms:ir.ui.view,arch_db:sh_shop_product_extra_details.sh_show_website_product_detail_config_settings
+msgid "Show Product Internal Reference Details in Shop Product"
+msgstr "Montrer la référence interne sur la page produit"
+
+#. module: sh_shop_product_extra_details
+#: model_terms:ir.ui.view,arch_db:sh_shop_product_extra_details.sh_show_website_product_detail_config_settings
+msgid "Show Product UoM Details in Shop Product"
+msgstr "Montrer l'unité de mesure sur la page produit"
+
+#. module: sh_shop_product_extra_details
+#: model:ir.model.fields,field_description:sh_shop_product_extra_details.field_res_company__is_uom
+#: model:ir.model.fields,field_description:sh_shop_product_extra_details.field_res_config_settings__is_uom
+msgid "UOM"
+msgstr "UDM"
