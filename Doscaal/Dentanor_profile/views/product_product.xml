@@ -40,6 +40,18 @@
         </field>
     </record>
 
+    <record id="product_product_form3" model="ir.ui.view">
+        <field name="name">prodcut_product surcharge</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='uom_po_id']" position="after">
+                <field name="margin" widget="monetary" options="{'currency_field': 'cost_currency_id'}"/>
+                <field name="margin_percent"/>
+            </xpath>
+        </field>
+    </record>
+
     <record id="product_product_form2" model="ir.ui.view">
         <field name="name">prodcut_product surcharge</field>
         <field name="model">product.product</field>
@@ -56,6 +68,8 @@
             </xpath>
             <xpath expr="//field[@name='cost_currency_id']" position="after">
                 <field name="margin_cost" widget="monetary" options="{'currency_field': 'cost_currency_id'}"/>
+                <field name="margin" widget="monetary" options="{'currency_field': 'cost_currency_id'}"/>
+                <field name="margin_percent"/>
             </xpath>
         </field>
     </record>
