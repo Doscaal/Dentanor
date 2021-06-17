@@ -38,6 +38,10 @@
             <xpath expr="//label[@for='standard_price']" position="attributes">
                 <attribute name="string">Valorisation</attribute>
             </xpath>
+            <xpath expr="//field[@name='uom_po_id']" position="after">
+                <field name="margin" widget="monetary" options="{'currency_field': 'cost_currency_id'}" attrs="{'invisible': [('product_variant_count', '&gt;', 1)]}"/>
+                <field name="margin_percent" attrs="{'invisible': [('product_variant_count', '&gt;', 1)]}"/>
+            </xpath>
             <xpath expr="//label[@for='standard_price']" position="before">
                 <field name="margin_cost" attrs="{'invisible': [('product_variant_count', '&gt;', 1)]}"/>
             </xpath>
