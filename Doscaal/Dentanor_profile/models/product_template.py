@@ -22,8 +22,9 @@ class ProductTemplate(models.Model):
             variant = template.product_variant_ids
             template.margin_cost = template.product_variant_ids.margin_cost
             template.margin = variant.list_price - variant.margin_cost
-            template.margin_percent = (variant.list_price - variant.margin_cost
-                                       ) / variant.list_price * 100
+            template.margin_percent = variant.list_price and (
+                variant.list_price - variant.margin_cost
+            ) / variant.list_price * 100 or 0
         for template in (self - unique_variants):
             template.margin_cost = 0
             template.margin = 0
