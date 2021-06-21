@@ -47,6 +47,7 @@
         'views/stock_quant.xml',
         'security/res_groups.xml',
     ],
+    'qweb': ['static/src/xml/qty_at_date.xml'],
     'test': [],
     'installable': True,
     'active': True,

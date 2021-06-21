@@ -1,0 +1,12 @@
+<templates>
+    <div t-name="sale_stock.qtyAtDate">
+        <div t-att-class="!widget.data.display_qty_widget ? 'invisible' : ''">
+            <t t-if="widget.data.free_qty_today &lt; widget.data.qty_to_deliver and !widget.data.is_mto">
+                <a tabindex="0" class="fa fa-info-circle text-danger"/>
+            </t>
+            <t t-else="">
+                <a tabindex="0" class="fa fa-info-circle text-primary"/>
+            </t>
+        </div>
+    </div>
+</templates>
