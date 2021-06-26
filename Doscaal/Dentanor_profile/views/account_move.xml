@@ -21,6 +21,9 @@
                 <field name="margin" optional="show"/>
                 <field name="margin_value" optional="hide"/>
             </xpath>
+                <xpath expr="//field[@name='invoice_origin']" position="after">
+                    <field name="current_website_id"/>
+                </xpath>
             <xpath expr="//field[@name='amount_residual']" position="after">
                 <field name="margin"/>
                 <field name="margin_value"/>
