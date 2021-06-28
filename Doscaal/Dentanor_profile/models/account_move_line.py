@@ -41,6 +41,14 @@ class AccountMove(models.Model):
 
     margin = fields.Float(string='Marge(%)', compute="compute_margin")
     margin_value = fields.Float(string='Marge', compute="compute_margin")
+    current_website_id = fields.Many2one(comodel_name='website',
+                                         string='Site web')
+
+    def get_base_url(self):
+        if self.current_website_id and self.current_website_id.domain:
+            return self.current_website_id.domain
+        else:
+            return super(AccountMove, self).get_base_url()
 
     def write(self, values):
         if values.get('invoice_line_ids', False):
