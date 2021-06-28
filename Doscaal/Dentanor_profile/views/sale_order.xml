@@ -30,17 +30,4 @@
             </xpath>
         </field>
     </record>
-
-    <record id="view_order_stock" model="ir.ui.view">
-        <field name="name">sale_order form surcharge</field>
-        <field name="model">sale.order</field>
-        <field name="inherit_id" ref="sale_stock.view_order_form_inherit_sale_stock_qty"/>
-        <field name="arch" type="xml">
-            <xpath expr="//tree/field[@name='free_qty_today']" position="attributes">
-                <attribute name="invisible">0</attribute>
-                <attribute name="string">Stock dispo</attribute>
-                <attribute name="optional">hide</attribute>
-            </xpath>
-        </field>
-    </record>
 </odoo>
