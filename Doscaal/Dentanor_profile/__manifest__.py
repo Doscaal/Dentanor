@@ -46,6 +46,7 @@
         'views/project_task.xml',
         'views/stock_quant.xml',
         'security/res_groups.xml',
+        'wizard/payment_link_wizard.xml',
     ],
     'qweb': ['static/src/xml/qty_at_date.xml'],
     'test': [],
