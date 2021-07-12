@@ -22,6 +22,7 @@
         'industry_fsm_stock',
         'industry_fsm_report',
         'mrp',
+        'hr_expense',
     ],
     'images': [],
     'data': [
