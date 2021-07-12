@@ -16,5 +16,6 @@ from . import res_users
 from . import product_product
 from . import sale_order_line
 from . import stock_quant
+from . import hr_expense
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
